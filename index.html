@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <h1>JavaScript<br><span>Age Calculator</span></h1>
+
+      <div class="input-box">
+        <input type="date" id="date">
+        <button onclick="calculateAge()">Calculate</button>
+      </div>
+        <p id="result"></p>
+    </div>
+
+  </div>
+  <script>
+    let userInput = document.getElementById('date');
+    userInput.max = new Date().toISOString().split('T')[0];
+
+    function calculateAge() {
+      let birthDate = new Date(userInput.value);
+      let today = new Date();
+
+      let birthDay = birthDate.getDate();
+      let birthMonth = birthDate.getMonth() + 1;
+      let birthYear = birthDate.getFullYear();
+
+      let currentDay = today.getDate();
+      let currentMonth = today.getMonth() + 1;
+      let currentYear = today.getFullYear();
+
+      let year = currentYear - birthYear;
+      let month = currentMonth - birthMonth;
+      let day = currentDay - birthDay;
+
+      //Adjust if day is negative
+      if (day < 0) {
+        month--;
+        //Get days in previous month
+        let prevMonth = new Date(currentYear, currentMonth - 1, 0).getDate();
+        day += prevMonth;
+      }
+
+      // Adjust if month is negative
+      if (month < 0) {
+        year--;
+        month += 12;
+      }
+      const result = `You are ${year} year${year !== 1 ? 's' : ''} ${month} month${month !== 1 ? 's' : ''} ${day} day${day !== 1 ? 's' : ''} old`;
+      document.getElementById('result').textContent = result;
+    }
+
+  </script>
+</body>
+
+</html>
