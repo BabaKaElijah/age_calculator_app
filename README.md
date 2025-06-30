@@ -21,4 +21,37 @@ The Age Calculator is a simple web app that calculates a person's age in **years
 ---
 
 ## 📂 Project Structure
+```
+age-calculator/
+│
+├── index.html # Main HTML file
+├── style.css # Custom styling
+├── age-calculator.png # Screenshot
+```
 
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript 
+
+---
+
+## ✅ How to Use
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/age-calculator.git
+```
+2. Open the folder in your code editor
+
+3. Open index.html in your browser
+
+4. Select a date of birth and click "Calculate"
+
+
+## 🙌 Author
+Developed by Ellias Sithole
