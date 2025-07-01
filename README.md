@@ -38,6 +38,46 @@ age-calculator/
 - JavaScript 
 
 ---
+## 🎂 Age Calculator HTML Structure
+
+This HTML provides a simple UI to input a birth date and display the calculated age.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css"> <!-- Your CSS file -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <h1>
+        JavaScript<br>
+        <span>Age Calculator</span>
+      </h1>
+
+      <!-- Date input and calculate button -->
+      <div class="input-box">
+        <input type="date" id="date" max=""> <!-- max will be set by JS to today -->
+        <button onclick="calculateAge()">Calculate</button>
+      </div>
+
+      <!-- Where the age result will be displayed -->
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code to calculate age will go here
+  </script>
+</body>
+
+</html>
+```
 ## 📆 Age Calculator Logic (JavaScript)
 
 This function calculates the age based on a user's inputted birth date and today's date. It accounts for day and month differences to provide an accurate age breakdown.
