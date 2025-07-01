@@ -38,6 +38,47 @@ age-calculator/
 - JavaScript 
 
 ---
+## 📆 Age Calculator Logic (JavaScript)
+
+This function calculates the age based on a user's inputted birth date and today's date. It accounts for day and month differences to provide an accurate age breakdown.
+
+```javascript
+let userInput = document.getElementById('date');
+userInput.max = new Date().toISOString().split('T')[0];
+
+function calculateAge() {
+  let birthDate = new Date(userInput.value);
+  let today = new Date();
+
+  let birthDay = birthDate.getDate();
+  let birthMonth = birthDate.getMonth() + 1;
+  let birthYear = birthDate.getFullYear();
+
+  let currentDay = today.getDate();
+  let currentMonth = today.getMonth() + 1;
+  let currentYear = today.getFullYear();
+
+  let year = currentYear - birthYear;
+  let month = currentMonth - birthMonth;
+  let day = currentDay - birthDay;
+
+  // Adjust if day is negative
+  if (day < 0) {
+    month--;
+    let prevMonth = new Date(currentYear, currentMonth - 1, 0).getDate();
+    day += prevMonth;
+  }
+
+  // Adjust if month is negative
+  if (month < 0) {
+    year--;
+    month += 12;
+  }
+
+  const result = `You are ${year} year${year !== 1 ? 's' : ''} ${month} month${month !== 1 ? 's' : ''} ${day} day${day !== 1 ? 's' : ''} old`;
+  document.getElementById('result').textContent = result;
+}
+```
 
 ## ✅ How to Use
 
