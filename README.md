@@ -1,6 +1,7 @@
 # 📆 Age Calculator App
 
-The Age Calculator is a simple web app that calculates a person's age in **years, months, and days** based on their date of birth. It's built with **HTML, CSS, and JavaScript** and is perfect for beginner practice or use in small projects.
+ChatGPT said:
+This JavaScript Age Calculator is a featured project on my portfolio website, showcasing my ability to build interactive, user-friendly web tools using core JavaScript. It allows users to input their date of birth and instantly see their exact age in years, months, and days through precise date calculations and responsive UI updates. The project highlights my understanding of real-world logic implementation, DOM manipulation, and clean, accessible design—demonstrating both my technical skills and attention to user experience.
 
 ---
 
